@@ -54,6 +54,11 @@ The principle behind the microservice ofter aren't new but are part of good desi
   * No more installing a JVM, app server, and then deplying the artifacts to them
   * Build the container once, deploy it anywhere
   * Container should be free of state and configuration
+  * run every tenant’s code in their own Docker container 
+  * delegate to a proxy or a gateway the function to route the requests to tenant-specific container
+  * use a pool of pre-warmed containers reducing cold startup
+  * Containers that are recycled are simply re-started and put back in the unassigned pool
+  * 
 * Deploy constantly - even hourly
 * Each microservice can be written, build, and deployed independently
 * Run many versions of the same microservice concurrently
@@ -71,6 +76,10 @@ The principle behind the microservice ofter aren't new but are part of good desi
 
 ### Need further investigations
 * [Zipkin](https://github.com/openzipkin/zipkin/wiki) to trace a pages in order to see their execution path and to determine the time spent for loading for performance monitoring and analysis.
+
+### logging Tools
+* [Bunyan](https://github.com/trentm/node-bunyan) is a simple and fast JSON logging library for node.js Services
+
 
 ### Orchestration vs choreography
 * Orchestration
