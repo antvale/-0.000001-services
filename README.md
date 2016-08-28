@@ -58,11 +58,27 @@ The principle behind the microservice ofter aren't new but are part of good desi
   * delegate to a proxy or a gateway the function to route the requests to tenant-specific container
   * use a pool of pre-warmed containers reducing cold startup
   * Containers that are recycled are simply re-started and put back in the unassigned pool
-  * 
+  *  
 * Deploy constantly - even hourly
-* Each microservice can be written, build, and deployed independently
+* Each microservice can bezed written, build, and deployed independently
 * Run many versions of the same microservice concurrently
 * Run many versions of each microservice in the same environment
+* Antifragility - injects random failures into production components (Chaos Monkey)
+
+### Dening Cloud-Native Architectures
+#### [Twelve-Factor Applications](https://12factor.net/)
+
+
+### Charactestics of Microservices (from Martin Fowler)
+* Componentizatin via services
+* Organized aroung business capabilities
+* Products not Projects
+* Smart endpoint and dumb pipes
+* Decentrilized governance
+* Decentrilezed Data Management
+* Infrastructure Automation
+* Design for failure
+* Evolutionary Design
 
 ### API reference implementation
 * Jersey - RI of JAX-RS/JSR 311
@@ -142,3 +158,8 @@ The principle behind the microservice ofter aren't new but are part of good desi
   - Most Organization are structured around horizontal technology layer- need to build a small product-focused teams
   - much higher skills required
   - many developers will not want to do production support
+
+## References
+[Scaling Microservices with an Event Stream](https://www.thoughtworks.com/insights/blog/scaling-microservices-event-stream)
+[Orchestration using BPMN and Microservices – Good or bad Practice?](http://www.bpm-guide.de/2015/04/09/orchestration-using-bpmn-and-microservices/)
+[Migrationg to Cloud-Native App](https://d1fto35gcfffzn.cloudfront.net/campaigns/Migrating_to_Cloud-Native_App_Architectures_Pivotal.pdf)
